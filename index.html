@@ -5,7 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>aospbooks — Source-Referenced Books on Android Internals</title>
 <meta name="description" content="Open technical books on Android internals: AOSP Internals and Android Emulator Internals, with every claim referencing real source code paths.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%233ddc84'/%3E%3Cpath d='M30 26h28a12 12 0 0 1 12 12v36a10 10 0 0 0-10-10H30z' fill='%23073042'/%3E%3Cpath d='M30 26v38h30a10 10 0 0 1 10 10V38a12 12 0 0 0-12-12z' fill='none' stroke='%23073042' stroke-width='6'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="avatar.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4MLVT8GS80"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4MLVT8GS80');
+</script>
 <style>
   :root {
     --bg: #ffffff;
@@ -41,6 +48,15 @@
     max-width: 60rem;
     margin: 0 auto;
     padding: 3rem 1.25rem 2rem;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  header img.avatar {
+    border-radius: 1rem;
+    flex-shrink: 0;
   }
   header h1 {
     font-size: 2rem;
@@ -114,8 +130,11 @@
 <body>
 <main>
   <header>
-    <h1>aospbooks</h1>
-    <p class="tagline">Source-referenced technical books on Android internals</p>
+    <img class="avatar" src="avatar.png" alt="aospbooks logo" width="88" height="88">
+    <div>
+      <h1>aospbooks</h1>
+      <p class="tagline">Source-referenced technical books on Android internals</p>
+    </div>
   </header>
 
   <section class="intro">

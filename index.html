@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>aospbooks — Source-Referenced Books on Android Internals</title>
+<meta name="description" content="Open technical books on Android internals: AOSP Internals and Android Emulator Internals, with every claim referencing real source code paths.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%233ddc84'/%3E%3Cpath d='M30 26h28a12 12 0 0 1 12 12v36a10 10 0 0 0-10-10H30z' fill='%23073042'/%3E%3Cpath d='M30 26v38h30a10 10 0 0 1 10 10V38a12 12 0 0 0-12-12z' fill='none' stroke='%23073042' stroke-width='6'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1b2530;
+    --muted: #5b6b7b;
+    --card-bg: #f6f8fa;
+    --card-border: #d9e1e8;
+    --accent: #0b7a4b;
+    --accent-fg: #ffffff;
+    --link: #0b6e99;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #10161d;
+      --fg: #e6edf3;
+      --muted: #9aa8b5;
+      --card-bg: #18212b;
+      --card-border: #2c3946;
+      --accent: #3ddc84;
+      --accent-fg: #0b2818;
+      --link: #58b7dd;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  main {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 3rem 1.25rem 2rem;
+  }
+  header h1 {
+    font-size: 2rem;
+    margin: 0 0 .25rem;
+  }
+  header p.tagline {
+    color: var(--muted);
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  section.intro {
+    margin: 1.75rem 0 2.25rem;
+  }
+  .books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.25rem;
+  }
+  .book {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: .75rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .book h2 {
+    margin: 0 0 .25rem;
+    font-size: 1.3rem;
+  }
+  .book p.subtitle {
+    color: var(--muted);
+    margin: 0 0 .75rem;
+    font-size: .95rem;
+  }
+  .book p.desc {
+    margin: 0 0 1.25rem;
+    flex: 1;
+  }
+  .book .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+  }
+  a { color: var(--link); }
+  a.btn {
+    display: inline-block;
+    padding: .45rem 1rem;
+    border-radius: .5rem;
+    text-decoration: none;
+    font-weight: 600;
+    background: var(--accent);
+    color: var(--accent-fg);
+  }
+  a.btn.secondary {
+    background: transparent;
+    color: var(--fg);
+    border: 1px solid var(--card-border);
+    font-weight: 500;
+  }
+  a.btn:hover { filter: brightness(1.08); }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--card-border);
+    color: var(--muted);
+    font-size: .9rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>aospbooks</h1>
+    <p class="tagline">Source-referenced technical books on Android internals</p>
+  </header>
+
+  <section class="intro">
+    <p>
+      <strong>aospbooks</strong> publishes open technical books that explain how Android
+      works from the inside — written against the real source trees, with claims
+      referencing actual file paths and line numbers rather than folklore. The books are
+      published openly for community review: if you spot an error or a missing detail,
+      please open an issue or a pull request on the corresponding repository at
+      <a href="https://github.com/aospbooks">github.com/aospbooks</a>.
+    </p>
+  </section>
+
+  <section class="books">
+    <article class="book">
+      <h2>AOSP Internals</h2>
+      <p class="subtitle">A Developer's Guide to the Android Open Source Project</p>
+      <p class="desc">
+        A comprehensive walk through the full AOSP stack, bottom to top — boot and init,
+        the kernel and Bionic, Binder IPC, HALs, the graphics and render pipeline, ART,
+        <code>system_server</code> and the framework services, apps, security, and more —
+        across 67 chapters plus appendices. An
+        <a href="https://aospbooks.github.io/aosp-internal-book/llms.txt">llms.txt</a>
+        index is available for AI assistants.
+      </p>
+      <div class="links">
+        <a class="btn" href="https://aospbooks.github.io/aosp-internal-book/">Read online</a>
+        <a class="btn secondary" href="https://github.com/aospbooks/aosp-internal-book">GitHub</a>
+      </div>
+    </article>
+
+    <article class="book">
+      <h2>Android Emulator Internals</h2>
+      <p class="subtitle">A Developer's Guide to the Android Emulator</p>
+      <p class="desc">
+        The Android Emulator from the host process down to the guest kernel — the QEMU
+        fork, CPU acceleration, the <code>android-emu</code> core, the gfxstream graphics
+        pipeline, snapshots and Quickboot, networking, the gRPC control plane, and the
+        Qt/WebRTC user interfaces — across 28 chapters plus appendices.
+      </p>
+      <div class="links">
+        <a class="btn" href="https://aospbooks.github.io/android-emulator-internal-book/">Read online</a>
+        <a class="btn secondary" href="https://github.com/aospbooks/android-emulator-internal-book">GitHub</a>
+      </div>
+    </article>
+  </section>
+
+  <footer>
+    <p>
+      Feedback and contributions are welcome on
+      <a href="https://github.com/aospbooks">GitHub</a>.
+      Android is a trademark of Google LLC. This project is not affiliated with Google.
+    </p>
+  </footer>
+</main>
+</body>
+</html>

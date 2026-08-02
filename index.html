@@ -101,6 +101,20 @@
     flex-wrap: wrap;
     gap: .6rem;
   }
+  section.workflow {
+    margin-top: 2.5rem;
+  }
+  section.workflow h2 {
+    font-size: 1.3rem;
+    margin: 0 0 .5rem;
+  }
+  section.workflow ul {
+    margin: .5rem 0 1rem;
+    padding-left: 1.4rem;
+  }
+  section.workflow li {
+    margin-bottom: .35rem;
+  }
   a { color: var(--link); }
   a.btn {
     display: inline-block;
@@ -180,6 +194,23 @@
         <a class="btn secondary" href="https://github.com/aospbooks/android-emulator-internal-book">GitHub</a>
       </div>
     </article>
+  </section>
+
+  <section class="workflow">
+    <h2>How These Books Are Made</h2>
+    <p>
+      These books are created with the assistance of AI coding agents (Claude Code),
+      guided and directed by human authors. The workflow looks like this:
+    </p>
+    <ul>
+      <li><strong>Human-led:</strong> People decide the topics, structure, and direction.</li>
+      <li><strong>AI-assisted:</strong> Claude Code analyzes the Android source code and helps draft the content.</li>
+      <li><strong>Human-reviewed:</strong> Every chapter is reviewed and refined by people to ensure accuracy and clarity (or published openly for public review).</li>
+    </ul>
+    <p>
+      We believe this approach lets us cover large, complex codebases at a depth and
+      pace that would be difficult otherwise.
+    </p>
   </section>
 
   <footer>
